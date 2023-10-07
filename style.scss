@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Happy+Monkey&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:active {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    
+        .left {
+            font-family: "Great Vibes", cursive;
+            font-size: 1rem;
+        }
+    
+        .right {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .menu-nav {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        position: relative;
+        // outline: 1px solid lime;
+
+        a {
+            display: inline-block;
+            padding: .5em 2em;
+            // outline: 1px solid red;
+            // background-color: grey;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            background-color: black;
+            top: 0;
+            width: 100%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            background-color: black;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 80%;
+    margin: 2rem auto;
+
+    & > div {
+    position: relative;
+    outline: 1px solid lime;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        p {
+            position: absolute;
+            bottom: 0;
+            background-color: rgb(0, 0, 0, .4);
+            width: 100%;
+            padding-block: 1rem;
+            color: whitesmoke;
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: whitesmoke;
+    padding-block: .5rem;
+    gap: .5rem;
+
+    a {
+        color: whitesmoke;
+        font-weight: 400;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .footer-nav {
+            display: flex;
+            list-style-type: none;
+            // outline: 1px solid red;
+            justify-content: space-evenly;
+            width: 50%;
+        }
+    }
+}
